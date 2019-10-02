@@ -1,0 +1,19 @@
+{
+  "name": "synecdoche.dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "postcss.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/synecdoche-web-services/synecdoche.dev.git"
+  },
+  "author": "Evan Rusmisel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/synecdoche-web-services/synecdoche.dev/issues"
+  },
+  "homepage": "https://github.com/synecdoche-web-services/synecdoche.dev#readme"
+}
