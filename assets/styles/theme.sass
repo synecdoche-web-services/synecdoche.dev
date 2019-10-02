@@ -1,0 +1,25 @@
+@import 'vars', 'header', 'footer', 'content'
+
+*::selection
+	color: red
+	background-color: $light-blue
+
+body
+	margin: 0
+	padding: 0
+	background-color: $background-color
+
+	font-family: $body-font-family
+	line-height: $body-line-height
+	font-size: $body-font-size
+	color: $body-color
+
+h1, h2, h3, h4, h5, h6
+	font-family: $header-font-family
+	line-height: $header-line-height
+
+a
+	text-decoration: none
+	color: $light-blue
+	&:hover
+		text-decoration: underline

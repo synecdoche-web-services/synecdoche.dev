@@ -1,0 +1,18 @@
+<form action="{{ .Get "action" }}" method="POST">
+	<div>
+		<label for="name">My name is</label>
+		<input type="text" name="name" id="name" />
+	</div>
+	<div>
+		<label for="email">My email is</label>
+		<input type="email" name="email" id="email" />
+	</div>
+	<div>
+		<label for="message">I would like to say</label>
+		<textarea name="message" id="message"></textarea>
+	</div>
+
+	<button type="submit">
+		Send
+	</button>
+</form>

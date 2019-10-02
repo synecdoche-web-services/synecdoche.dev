@@ -1,0 +1,22 @@
+.section
+	box-sizing: border-box
+	width: 100%
+	padding: 1em
+	margin: 1em 0
+
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+
+	& > p
+		max-width: $max-content-width
+		text-align: justify
+		padding: 0
+		margin: 0
+
+		& > strong
+			font-size: 1em
+			display: inline-block
+			margin: 0 1em 0 0
+			color: $header-color
