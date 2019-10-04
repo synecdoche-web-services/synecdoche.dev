@@ -1,8 +1,4 @@
-@import 'vars', 'header', 'footer', 'content'
-
-*::selection
-	color: red
-	background-color: $light-blue
+@import 'vars', 'header', 'main', 'footer', 'form', 'extras'
 
 body
 	margin: 0
@@ -14,9 +10,23 @@ body
 	font-size: $body-font-size
 	color: $body-color
 
+	::selection
+		color: white
+		text-shadow: none
+		background-color: $light-blue
+
+ol, ul, p, h1, h2, h3, h4, h5, h6
+	margin: 0
+	padding: 0
+
+
 h1, h2, h3, h4, h5, h6
 	font-family: $header-font-family
 	line-height: $header-line-height
+	margin-top: 3em
+
+p
+	margin-top: 2em
 
 a
 	text-decoration: none

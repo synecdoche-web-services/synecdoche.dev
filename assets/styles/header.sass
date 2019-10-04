@@ -1,16 +1,25 @@
 header
-	position: fixed
-	top: 0
-	left: 0
+	box-sizing: border-box
+
 	width: 100%
-	font-size: 2em
-	height: 1em
-	background-color: $background-color
-	box-shadow: 0 0 .2em 0 black
+	padding: .2em
 
-	padding: .5em
+	background-color: $body-color
+	color: $background-color
 
-	& > h1
-		margin: 0
-		font-size: 1em
-		line-height: 1
+	& > a
+		@extend h1
+		font-size: 2em
+		color: $background-color
+		&:hover
+			text-decoration: none
+
+.breadcrumb-bar
+	list-style: none
+	display: inline
+
+	& > .breadcrumb-bar__item
+		display: inline
+		&:before
+			content: '\2192'
+			margin: 0 .2em

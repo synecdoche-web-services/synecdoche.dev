@@ -1,18 +1,18 @@
-<form action="{{ .Get "action" }}" method="POST">
-	<div>
+<form class="form" action="{{ with .Get "action" }}{{ . }}{{ else }}/contact/{{ end }}" method="POST">
+	<div class="form__input">
 		<label for="name">My name is</label>
-		<input type="text" name="name" id="name" />
+		<input type="text" name="name" id="name" required />
 	</div>
-	<div>
+	<div class="form__input">
 		<label for="email">My email is</label>
-		<input type="email" name="email" id="email" />
+		<input type="email" name="email" id="email" required />
 	</div>
-	<div>
+	<div class="form__input">
 		<label for="message">I would like to say</label>
-		<textarea name="message" id="message"></textarea>
+		<textarea rows="6" name="message" id="message" required></textarea>
 	</div>
 
-	<button type="submit">
+	<button type="submit" class="form__submit">
 		Send
 	</button>
 </form>

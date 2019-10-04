@@ -4,13 +4,13 @@
 		<meta charset="UTF-8" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Crimson+Text|Orbitron&display=swap" />
 
-		{{ $themeStyle := resources.Get "styles/theme.sass" | toCSS | postCSS | minify | fingerprint }}
+		{{- $themeStyle := resources.Get "styles/theme.sass" | toCSS | postCSS | minify | fingerprint -}}
 		<link rel="stylesheet" href="{{ $themeStyle.Permalink }}" />
 		<title>{{ .Title }} | {{ .Site.Title }}</title>
 	</head>
 	<body>
 		{{ partial "header.html" . }}
-		<main>
+		<main class="main">
 			{{ block "main" . }}
 			{{ end }}
 		</main>

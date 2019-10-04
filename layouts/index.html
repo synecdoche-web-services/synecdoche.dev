@@ -1,9 +1,19 @@
-{{ define "main" }}
+{{ define "main" -}}
+	{{- $heroImage := .Resources.GetMatch "hero-image*" -}}
+	<div class="paralax-container paralax-container--dark" style="background-image: url('{{ $heroImage.Permalink }}');">
+		<div class="paralax-container__content-wrapper">
+			<p>
+				Hire <span class="orbitron">Synecdoche</span> to build your professional business website.
+			</p>
+			<p>
+				<a class="cta-button cta-button--transparent" href="#pricing">Rates</a>
+				<a class="cta-button cta-button--opaque" href="#contact">Hire Us</a>
+			</p>
+			<p class="banner__section read-more">Read more below</section>
+		</div>
+	</div>
 
-<section class="section" id="cta">
-	<a class="cta" href="#contact">Contact Us</a>
-</section>
-
-{{ .Content }}
-
-{{ end }}
+	<article>
+		{{- .Content -}}
+	</article>
+{{- end }}

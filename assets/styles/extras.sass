@@ -1,0 +1,53 @@
+.paralax-container
+	background-size: cover
+	background-repeat: none
+	background-position: top center
+	background-attachment: fixed
+	width: 100%
+
+	& > .paralax-container__content-wrapper
+		box-sizing: border-box
+		width: 100%
+		padding: 3em 1em
+		text-align: justify
+
+		& > p
+			max-width: $max-content-width
+			margin: auto
+			text-align: center
+			margin-top: 2em
+
+	&--dark > .paralax-container__content-wrapper
+		background: change-color($body-color, $alpha: .9)
+		color: $background-color
+		text-shadow: 1px 1px 2px black
+
+.orbitron
+	font-family: 'orbitron'
+
+.read-more:after
+	content: '\2193'
+	display: block
+	font-weight: bold
+	color: $light-blue
+
+.cta-button
+	padding: .3em .5em
+	border-radius: 1em
+	transition: .2s
+	margin: 0 .5em
+	&:hover
+		text-decoration: none
+
+	&--opaque
+		color: $background-color
+		background-color: $light-blue
+		&:hover
+			background-color: lighten($light-blue, 10%)
+	&--transparent
+		color: $background-color
+		$bgcol: change-color(transparent, $alpha: .6)
+		background-color: $bgcol
+		border: 1px solid $background-color
+		&:hover
+			background-color: lighten($bgcol, 10%)

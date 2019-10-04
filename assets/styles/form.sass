@@ -1,0 +1,41 @@
+.form
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	width: 100%
+	max-width: 400px
+
+	& .form__input
+		box-sizing: border-box
+		position: relative
+		margin-top: 1em
+		width: 100%
+
+		& > label
+			margin-left: .4em
+			cursor: text
+		& > input, & > textarea
+			box-sizing: border-box
+			width: 100%
+			padding: .4em
+			border: 1px solid $light-blue
+			background-color: $background-color
+			font: inherit
+			line-height: 1.2
+			display: block
+		& > textarea
+			min-height: 3.6em
+			resize: vertical
+	& .form__submit
+		font: inherit
+		margin-top: .4em
+		padding: .2em .6em
+		color: $background-color
+		background-color: $light-blue
+		border: 1px solid $light-blue
+		cursor: pointer
+		transition: .2s ease-in-out
+		&:hover
+			color: $light-blue
+			background-color: $background-color
