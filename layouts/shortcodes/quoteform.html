@@ -1,0 +1,27 @@
+<form class="form" action="{{ with .Get "action" }}{{ . }}{{ end }}" method="POST">
+	<div class="form__input">
+		<label for="name">Individual Name</label>
+		<input type="text" name="name" id="name" required />
+	</div>
+	<div class="form__input">
+		<label for="business_name">Business Name (if applicable)</label>
+		<input type="text" name="business_name" id="business_name" />
+	</div>
+	<div class="form__input">
+		<label for="email">Contact Email</label>
+		<input type="email" name="email" id="email" required />
+	</div>
+	<div class="form__input">
+		<label for="function">Website Purpose</label>
+		<p>e.g. Business Landing Page, Personal Portfolio
+		<input type="text" name="function" id="function" />
+	</div>
+	<div class="form__input">
+		<label for="additional_data">Additional Comments</label>
+		<textarea rows="6" name="additional_data" id="additional_data" required></textarea>
+	</div>
+
+	<button type="submit" class="button button--cta">
+		Send
+	</button>
+</form>

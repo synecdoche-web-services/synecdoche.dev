@@ -2,14 +2,14 @@
 	{{- $heroImage := .Resources.GetMatch "hero-image*" -}}
 	<div class="paralax-container paralax-container--dark" style="background-image: url('{{ $heroImage.Permalink }}');">
 		<div class="paralax-container__content-wrapper">
+			<header>
+				<h1>Synecdoche Web Services</h1>
+				<p>Functional websites that <em>produce leads</em>.</p>
+			</header>
 			<p>
-				Hire <span class="orbitron">Synecdoche</span> to build your professional business website.
+				{{/*<a class="button button--round" href="{{ ref . "pricing" }}">Prices</a>*/}}
+				<a class="button button--round button--cta" href="#contact">Contact</a>
 			</p>
-			<p>
-				<a class="cta-button cta-button--transparent" href="#pricing">Rates</a>
-				<a class="cta-button cta-button--opaque" href="#contact">Hire Us</a>
-			</p>
-			<p class="banner__section read-more">Read more below</section>
 		</div>
 	</div>
 

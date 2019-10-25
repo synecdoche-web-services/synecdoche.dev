@@ -1,35 +1,26 @@
-@import 'vars', 'header', 'main', 'footer', 'form', 'extras'
+$header-font-family: 'Orbitron', sans-serif
+$header-line-height: 1.4
+$header-color: #000
+$body-font-family: serif
+$body-line-height: 1.6
+$body-font-size: 18px
 
-body
-	margin: 0
-	padding: 0
-	background-color: $background-color
+$base-color-hue: 320
 
-	font-family: $body-font-family
-	line-height: $body-line-height
-	font-size: $body-font-size
-	color: $body-color
+$base-saturation: 80
+$high-saturation: $base-saturation + 20
+$low-saturation: $base-saturation - 20
 
-	::selection
-		color: white
-		text-shadow: none
-		background-color: $light-blue
+$base-lightness: 50
+$high-lightness: $base-lightness + 20
+$low-lightness: $base-lightness - 20
 
-ol, ul, p, h1, h2, h3, h4, h5, h6
-	margin: 0
-	padding: 0
+$link-color: {{ .Site.Params.linkColor }}
+$theme-color: {{ .Site.Params.themeColor }}
+$background-color: hsl($base-color-hue, 20, 90)
+$body-color: hsl($base-color-hue, 20, 10)
 
+$breakpoint: 800px
+$max-content-width: 6in
 
-h1, h2, h3, h4, h5, h6
-	font-family: $header-font-family
-	line-height: $header-line-height
-	margin-top: 3em
-
-p
-	margin-top: 2em
-
-a
-	text-decoration: none
-	color: $light-blue
-	&:hover
-		text-decoration: underline
+@import 'reset', 'paralax', 'form', 'button', 'nav', 'main', 'footer'

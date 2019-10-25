@@ -1,0 +1,31 @@
+body
+	margin: 0
+	padding: 0
+	background-color: $background-color
+
+	font-family: $body-font-family
+	line-height: $body-line-height
+	font-size: $body-font-size
+	color: $body-color
+
+	::selection
+		color: white
+		text-shadow: none
+		background-color: $theme-color
+
+ol, ul, p, h1, h2, h3, h4, h5, h6
+	margin: 0
+	padding: 0
+
+
+h1, h2, h3, h4, h5, h6
+	font-family: $header-font-family
+	line-height: $header-line-height
+	font-weight: normal
+
+a
+	text-decoration: none
+	color: $link-color
+	&:hover
+		text-decoration: underline
+		color: lighten($link-color, 20%)

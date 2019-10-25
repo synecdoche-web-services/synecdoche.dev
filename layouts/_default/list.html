@@ -1,8 +1,10 @@
 {{ define "main" -}}
-	{{- .Content -}}
+	<section>
+		{{- .Content -}}
+	</section>
 
 	{{- range .Pages -}}
-		<a href="{{ .Permalink }}">{{- .Title }} ({{ .Date.Format "January, 2006" -}})</a>
+		<a href="{{ .Permalink }}">{{- .Title -}}</a>
 	{{- else -}}
 		<p>It looks like there's nothing here.</p>
 	{{- end -}}

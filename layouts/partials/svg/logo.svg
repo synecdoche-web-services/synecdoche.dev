@@ -1,0 +1,1 @@
+<svg width="{{ .size }}" height="{{ .size }}" viewBox="0 0 1778 1803" xmlns="http://www.w3.org/2000/svg"><path fill="{{.fill}}" d="M-2-2v865h1654v763H75v-254H-2v432h1781V685H126V176h1322v198h77V-2z"/></svg>

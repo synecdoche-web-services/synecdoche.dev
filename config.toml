@@ -1,5 +1,14 @@
 baseURL = "https://synecdoche.dev/"
 languageCode = "en-us"
+
 title = "Synecdoche Web Services"
+copyright = "&copy; 2019 Synecdoche Web Services LLC. All Rights Reserved."
 
 disableKinds = [ "taxonomy", "taxonomyTerm", "RSS" ]
+
+[params]
+	description = "Synecdoche Web Services makes stunning websites that produce leads for your small business or sole proprietorship"
+	keywords = ["marketing", "website", "development", "wisconsin"]
+
+	linkColor = "#1a91e6"
+	themeColor = "#23b253"
