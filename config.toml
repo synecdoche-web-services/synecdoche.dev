@@ -12,3 +12,7 @@ disableKinds = [ "taxonomy", "taxonomyTerm", "RSS" ]
 
 	linkColor = "#1a91e6"
 	themeColor = "#23b253"
+
+[[deployment.targets]]
+name = "s3"
+url = "s3://synecdoche.dev"
