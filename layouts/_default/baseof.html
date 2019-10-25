@@ -13,7 +13,6 @@
 		<title>{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}</title>
 	</head>
 	<body>
-		{{- partial "navigation.html" . -}}
 		<main class="main">
 			{{- block "main" . -}}{{- end -}}
 		</main>
