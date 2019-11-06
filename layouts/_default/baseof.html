@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" />
 		{{- $themeStyle := resources.Get "styles/theme.sass" | resources.ExecuteAsTemplate "style.theme.sass" . | toCSS | postCSS | minify | fingerprint -}}
 		<link rel="stylesheet" href="{{ $themeStyle.Permalink }}" integrity="{{ $themeStyle.Data.Integrity }}" />
+		{{- block "head" . -}}{{- end -}}
 
 		<title>{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}</title>
 	</head>

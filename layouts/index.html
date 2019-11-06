@@ -1,4 +1,9 @@
-{{ define "main" -}}
+{{- define "head" -}}
+	{{- $indexStyle := resources.Get "styles/page/index.sass" | toCSS | postCSS | minify | fingerprint -}}
+	<link rel="stylesheet" href="{{ $indexStyle.Permalink }}" integrity="{{ $indexStyle.Data.Integrity }}" />
+{{- end -}}
+
+{{- define "main" -}}
 	{{- $heroImage := .Resources.GetMatch "hero-image*" -}}
 	<div class="paralax-container paralax-container--dark" style="background-image: url('{{ $heroImage.Permalink }}');">
 		<div class="paralax-container__content-wrapper">
@@ -13,7 +18,30 @@
 		</div>
 	</div>
 
-	<article>
+	<section class="pagesection"><div class="pagesection__content">
+		<h2>About</h2>
+		Synecdoche is a digital marketing agency.
+		We help small businesses reach new users by getting online.
+	</div></section>
+
+	<section class="pagesection"><div class="pagesection__content">
+		<h2>Why Us</h2>
+		Synecdoche specializes in developing static websites,
+		meaning your website will load in a snap,
+		and keep your clients engaged.
+	</div></section>
+
+	<section class="pagesection"><div class="pagesection__content">
+		<h2>Pricing</h2>
+		Each website is unique in it's requirements and difficulties,
+		causing prices to range.
+		Generally though,
+		simple sites start at about $500,
+		and increase as bells and whistles are added.
+	</div></section>
+
+	<section class="pagesection"><div class="pagesection__content">
+		<h2>Contact</h2>
 		{{- .Content -}}
-	</article>
-{{- end }}
+	</div></section>
+{{- end -}}
