@@ -9,9 +9,8 @@ body
 	color: $body-color
 
 	::selection
-		color: white
 		text-shadow: none
-		background-color: $theme-color
+		background-color: change-color($link-color, $saturation: 70%, $lightness: 50%, $alpha: .5)
 
 ol, ul, p, h1, h2, h3, h4, h5, h6
 	margin: 0
