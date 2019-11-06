@@ -8,10 +8,16 @@ Synecdoche is a digital marketing agency.
 We help small businesses reach new users by getting online.
 
 ## Why Us
-While we offer a range of services,
-no tool fits every job:
-Synecdoche is specially suited for small businesses,
-and individuals who are looking to jump start their digital marketing with a website.
+Synecdoche specializes in developing static websites,
+meaning your website will load in a snap,
+and keep your clients engaged.
+
+## Pricing
+Each website is unique in it's requirements and difficulties,
+causing prices to range.
+Generally though,
+simple sites start at about $500,
+and increase as bells and whistles are added.
 
 ## Contact
 {{< formspreecontact email="evan@synecdoche.dev" >}}
