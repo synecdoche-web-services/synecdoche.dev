@@ -1,0 +1,3 @@
+<svg viewBox="0 0 233 44.6" xmlns="http://www.w3.org/2000/svg" height="{{ or .height "1em" }}">
+	<path fill="{{ or .color "currentColor" }}" d="M96.315-.035l-14.92 21.306h151.846zM.12 23.365L136.86 44.67l14.92-21.306z" />
+</svg>

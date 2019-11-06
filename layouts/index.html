@@ -3,7 +3,7 @@
 	<div class="paralax-container paralax-container--dark" style="background-image: url('{{ $heroImage.Permalink }}');">
 		<div class="paralax-container__content-wrapper">
 			<header>
-				<h1>Synecdoche Web Services</h1>
+				<h1>{{- partial "logo.svg" (dict "height" "2em" "color" .Site.Params.themecolor) -}}<br />Synecdoche Web Services</h1>
 				<p>Functional websites that <em>produce leads</em>.</p>
 			</header>
 			<p>
