@@ -20,3 +20,7 @@
 		background: change-color($body-color, $alpha: .9)
 		color: $background-color
 		text-shadow: 1px 1px 2px black
+	&--angled
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5em))
+		& .paralax-container__content-wrapper
+			padding-bottom: 5em

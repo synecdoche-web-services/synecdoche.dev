@@ -5,7 +5,7 @@
 
 {{- define "main" -}}
 	{{- $heroImage := .Resources.GetMatch "hero-image*" -}}
-	<div class="paralax-container paralax-container--dark" style="background-image: url('{{ $heroImage.Permalink }}');">
+	<div class="paralax-container paralax-container--dark paralax-container--angled" style="background-image: url('{{ $heroImage.Permalink }}');">
 		<div class="paralax-container__content-wrapper">
 			<header>
 				<h1>{{- partial "logo.svg" (dict "height" "2em" "color" .Site.Params.themecolor) -}}<br />Synecdoche Web Services</h1>
