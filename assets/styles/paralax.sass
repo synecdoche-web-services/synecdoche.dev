@@ -21,6 +21,10 @@
 		color: $background-color
 		text-shadow: 1px 1px 2px black
 	&--angled
-		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5em))
+		transition: .3s
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 3em))
+		@media screen and (min-width: $breakpoint)
+			clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5em))
+
 		& .paralax-container__content-wrapper
-			padding-bottom: 5em
+			padding-bottom: 4em
