@@ -1,51 +1,20 @@
-{{- define "head" -}}
-	{{- $indexStyle := resources.Get "styles/page/index.sass" | toCSS | postCSS | minify | fingerprint -}}
-	<link rel="stylesheet" href="{{ $indexStyle.Permalink }}" integrity="{{ $indexStyle.Data.Integrity }}" />
-{{- end -}}
-
 {{- define "main" -}}
 	{{- $heroImage := .Resources.GetMatch "hero-image*" -}}
 	<div class="paralax-container paralax-container--dark paralax-container--angled" style="background-image: url('{{ $heroImage.Permalink }}');">
 		<div class="paralax-container__content-wrapper">
 			<header>
-				<h1>
-					{{- partial "logo/full-animated.svg" (dict "height" "5em" "color" .Site.Params.themecolor) -}}
-					<br />
-					Synecdoche Web Services
-				</h1>
+				{{- partial "logo/full-animated.svg" (dict "height" "10em" "color" .Site.Params.themecolor) -}}
+				<h1>Synecdoche Web Services</h1>
 				<p>Functional websites that <em>produce leads</em>.</p>
 			</header>
 			<p>
 				{{/*<a class="button button--round" href="{{ ref . "pricing" }}">Prices</a>*/}}
-				<a class="button button--round button--cta" href="#contact">Contact</a>
+				<a class="button button--round button--cta" href="{{ ref . "contact" }}">Contact</a>
 			</p>
 		</div>
 	</div>
 
-	<section class="pagesection"><div class="pagesection__content">
-		<h2>About</h2>
-		Synecdoche is a digital marketing agency.
-		We help small businesses reach new users by getting online.
-	</div></section>
-
-	<section class="pagesection"><div class="pagesection__content">
-		<h2>Why Us</h2>
-		Synecdoche specializes in developing static websites,
-		meaning your website will load in a snap,
-		and keep your clients engaged.
-	</div></section>
-
-	<section class="pagesection"><div class="pagesection__content">
-		<h2>Pricing</h2>
-		Each website is unique in it's requirements and difficulties,
-		causing prices to range.
-		Generally though,
-		simple sites start at about $500,
-		and increase as bells and whistles are added.
-	</div></section>
-
-	<section class="pagesection"><div class="pagesection__content">
-		<h2>Contact</h2>
+	<article>
 		{{- .Content -}}
-	</div></section>
+	</article>
 {{- end -}}
