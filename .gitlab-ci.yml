@@ -3,7 +3,7 @@ stages:
     - deploy
 
 build:
-    image: registry.gitlab.com/pages/hugo/hugo_extended:latest
+    image: alpine:latest
     stage: build
     variables:
         GIT_SUBMODULE_STRATEGY: recursive
@@ -13,6 +13,9 @@ build:
     only:
         - master
     before_script:
+        - apk add --update --no-cache npm curl
+        - curl -L https://github.com/gohugoio/hugo/releases/download/v0.60.1/hugo_extended_0.60.1_Linux-64bit.tar.gz | tar xz hugo
+        - mv hugo /usr/bin/hugo
         - npm install
     script:
         - hugo
