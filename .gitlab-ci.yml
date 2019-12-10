@@ -19,12 +19,11 @@ build:
         - hugo
 
 deploy:
-    image: mesosphere/aws-cli:latest
+    image: python:latest
     stage: deploy
     only:
         - master
+    before_script:
+        - pip install awscli
     script:
         - aws s3 sync public s3://synecdoche.dev --delete
-    environment:
-        name: production
-        url: https://synecdoche.dev
