@@ -1,0 +1,23 @@
+stages:
+    - build
+    - deploy
+
+build:
+    image: gohugoio/hugo:latest
+    stage: build
+    artifacts
+    only:
+        - master
+    script:
+        - hugo
+
+deploy:
+    image: mesosphere/aws-cli:latest
+    stage: deploy
+    only:
+        -master
+    script:
+        - aws s3 sync public s3://synecdoche.dev --delete
+    environment:
+        name: production
+        url: https://synecdoche.dev
