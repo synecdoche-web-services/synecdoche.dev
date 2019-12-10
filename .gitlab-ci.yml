@@ -3,7 +3,7 @@ stages:
     - deploy
 
 build:
-    image: gohugoio/hugo:latest
+    image: orus/hugo-builder:latest
     stage: build
     artifacts:
         paths:
