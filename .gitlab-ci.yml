@@ -17,7 +17,7 @@ deploy:
     image: mesosphere/aws-cli:latest
     stage: deploy
     only:
-        -master
+        - master
     script:
         - aws s3 sync public s3://synecdoche.dev --delete
     environment:
