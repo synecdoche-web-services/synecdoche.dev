@@ -5,7 +5,9 @@ stages:
 build:
     image: gohugoio/hugo:latest
     stage: build
-    artifacts
+    artifacts:
+        paths:
+            - public/
     only:
         - master
     script:
