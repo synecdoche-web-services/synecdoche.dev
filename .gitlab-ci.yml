@@ -3,7 +3,7 @@ stages:
     - deploy
 
 build:
-    image: orus/hugo-builder:latest
+    image: netlify/build:xenial
     stage: build
     artifacts:
         paths:
@@ -12,6 +12,7 @@ build:
         - master
     before_script:
         - git submodule sync --recursive
+        - npm install
     script:
         - hugo
 
