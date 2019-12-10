@@ -11,7 +11,7 @@ build:
     only:
         - master
     before_script:
-        - apk add --update --no-cache npm curl
+        - apk add --update --no-cache git npm curl
         - curl -L https://github.com/gohugoio/hugo/releases/download/v0.60.1/hugo_extended_0.60.1_Linux-64bit.tar.gz | tar -xz hugo && mv hugo /usr/bin
         - git submodule sync --recursive
         - npm install
