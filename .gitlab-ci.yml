@@ -16,9 +16,8 @@ build:
             - public/
     before_script:
         - apk add --update --no-cache npm make curl
-        - make hugo node_modules
     script:
-        - ./hugo
+        - make hugo_dir=/usr/bin
 
 deploy:
     image: python:latest
