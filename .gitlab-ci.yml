@@ -7,6 +7,10 @@ build:
     stage: build
     variables:
         GIT_SUBMODULE_STRATEGY: recursive
+    cache:
+        paths:
+            - hugo
+            - node_modules
     artifacts:
         paths:
             - public/
