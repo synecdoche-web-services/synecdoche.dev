@@ -5,6 +5,7 @@ build_data = config.toml postcss.config.js archetypes/** assets/** content/** la
 public: $(build_deps) $(build_data)
 	@echo "Building Site"
 	ls -l hugo
+	pwd
 	./hugo
 
 .PHONY: server
