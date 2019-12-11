@@ -12,5 +12,7 @@ and help you market your business online.
 Landing pages cost &dollar;300,
 websites built from an existing theme start at &dollar;500,
 and websites with custom themes start at &dollar;1000
-## Contact
-To hire us for a job, visit the [contact page]({{< ref "contact" >}})
+
+&nbsp;
+
+{{% button ref="contact" arrow=true %}}Get in Touch{{% /button %}}
