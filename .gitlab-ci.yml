@@ -11,7 +11,7 @@ build:
         paths:
             - public/
     before_script:
-        - apk add --update --no-cache npm make
+        - apk add --update --no-cache npm make curl
     script:
         - make
 
