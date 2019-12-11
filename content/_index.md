@@ -15,4 +15,4 @@ and websites with custom themes start at &dollar;1000
 
 &nbsp;
 
-{{% button ref="contact" arrow=true %}}Get in Touch{{% /button %}}
+{{% button ref="contact" arrow="true" %}}Get in Touch{{% /button %}}
