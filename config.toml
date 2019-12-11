@@ -7,6 +7,9 @@ copyright = "&copy; 2019 Synecdoche Web Services LLC. All Rights Reserved."
 
 disableKinds = [ "taxonomy", "taxonomyTerm", "RSS" ]
 
+[markup.goldmark.renderer]
+	unsafe= true
+
 [params]
 	description = "Synecdoche Web Services makes stunning websites that produce leads for your small business or sole proprietorship"
 	keywords = ["marketing", "website", "development", "wisconsin"]
