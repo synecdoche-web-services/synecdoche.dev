@@ -1,13 +1,18 @@
+$horizontal-padding: 1em
+$vertical-padding: .6em
+
 .button
-	padding: .6em .8em
 	transition: .2s
 	margin: 0 .5em
 	font: inherit
 	cursor: pointer
+	display: inline-block
 
 	color: $background-color
 	background-color: $body-color
 	border: 1px solid $background-color
+	text-shadow: none
+	font-family: sans-serif
 
 	&:hover, &:focus
 		color: $background-color
@@ -20,7 +25,20 @@
 		border-radius: 2em
 	&--cta
 		color: $background-color
-		background-color: $theme-color
+		background-color: darken($theme-color, 6%)
 		border: none
+		&:after
+			display: inline-block
+			content: '\27A4'
+			background-color: rgba(0,0,0, .14)
+			padding: $vertical-padding
+				right: $horizontal-padding
+				left: $horizontal-padding / 2
+			margin-left: - $horizontal-padding / 2
+			border-radius: 0 50% 50% 0
 		&:hover, &:focus
 			background-color: lighten($theme-color, 5%)
+	
+	&__content
+		padding: $vertical-padding $horizontal-padding
+		display: inline-block
