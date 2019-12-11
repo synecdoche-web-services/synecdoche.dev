@@ -1,0 +1,29 @@
+stages:
+    - build
+    - deploy
+
+build:
+    image: alpine:latest
+    stage: build
+    variables:
+        GIT_SUBMODULE_STRATEGY: recursive
+    artifacts:
+        paths:
+            - public/
+    only:
+        - master
+    before_script:
+        - apk add --update --no-cache npm hugo
+        - npm install
+    script:
+        - hugo
+
+deploy:
+    image: python:latest
+    stage: deploy
+    only:
+        - master
+    before_script:
+        - pip install awscli
+    script:
+        - aws s3 sync public s3://synecdoche.dev --delete
