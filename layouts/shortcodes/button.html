@@ -1,0 +1,5 @@
+{{ $href := or ( or (.Get "ref" | ref .) (.Get "relref" | relref .) ) (.Get "href") }}
+
+<a class="button{{ if (.Get "cta") }} button--cta{{ end }}{{ if (.Get "round") }} button--round{{ end }}{{ if (.Get "arrow") }} button--arrow{{ end }}" href="{{ $href }}">
+	<span class="button__content">{{ .Inner }}</span>
+</a>
