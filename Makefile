@@ -12,7 +12,7 @@ server: $(build_deps) $(build_data)
 
 hugo:
 	@echo "Downloading hugo v${HUGO_VERSION}"
-	curl -Ls "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz" | tar xz hugo
+	curl -Ls "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz" | tar -xz hugo
 
 node_modules: package.json package-lock.json
 	@echo "Installing dependencies"
