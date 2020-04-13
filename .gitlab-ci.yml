@@ -3,24 +3,18 @@ stages:
     - deploy
 
 build:
-    image: alpine:latest
     stage: build
-    variables:
-        GIT_SUBMODULE_STRATEGY: recursive
     artifacts:
         paths:
-            - public/
-    before_script:
-        - apk add --update --no-cache npm make curl
+            - out/
     script:
-        - make
+        - npm run build
+        - npm run export
 
 deploy:
-    image: python:latest
+    image: registry.gitlab.com/gitlab-org/cloud-deploy:latest
     stage: deploy
     only:
         - master
-    before_script:
-        - pip install awscli
     script:
-        - aws s3 sync public s3://synecdoche.dev --delete
+        - aws s3 sync out s3://synecdoche.dev --delete
