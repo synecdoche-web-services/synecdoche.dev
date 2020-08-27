@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export default ({ backgroundImage, children }) => (
-    <header style={{ backgroundImage }}>
-        { children }
-    </header>
-)
+    <header style={{ backgroundImage }}>{children}</header>
+);

@@ -1,23 +1,23 @@
 stages:
-    - build
-    - deploy
+  - build
+  - deploy
 
 build:
-    image: node
-    stage: build
-    artifacts:
-        paths:
-            - out/
-    before_script:
-        - npm install
-    script:
-        - npm run build
-        - npm run export
+  image: node
+  stage: build
+  artifacts:
+    paths:
+      - out/
+  before_script:
+    - npm install
+  script:
+    - npm run build
+    - npm run export
 
 deploy:
-    image: registry.gitlab.com/gitlab-org/cloud-deploy:latest
-    stage: deploy
-    only:
-        - master
-    script:
-        - aws s3 sync out s3://synecdoche.dev --delete
+  image: registry.gitlab.com/gitlab-org/cloud-deploy:latest
+  stage: deploy
+  only:
+    - master
+  script:
+    - aws s3 sync out s3://synecdoche.dev --delete
