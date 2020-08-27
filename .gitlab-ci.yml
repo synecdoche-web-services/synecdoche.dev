@@ -25,11 +25,9 @@ deploy:
   only:
     - master
   script:
-    -
-      aws s3 sync out s3://synecdoche.dev
+    - aws s3 sync out s3://synecdoche.dev
       --cache-control public,max-age=31536000,immutable
       --exclude '*.html' --exclude '_next/*'
-    -
-      aws s3 sync out s3://synecdoche.dev --delete
+    - aws s3 sync out s3://synecdoche.dev --delete
       --cache-control public,max-age=0,must-revalidate
       --exclude '*' --include '*.html' --include '_next/*'
