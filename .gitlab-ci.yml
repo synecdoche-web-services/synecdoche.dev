@@ -3,10 +3,13 @@ stages:
     - deploy
 
 build:
+    image: node
     stage: build
     artifacts:
         paths:
             - out/
+    before_script:
+        - npm install
     script:
         - npm run build
         - npm run export
