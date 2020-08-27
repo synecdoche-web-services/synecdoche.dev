@@ -1,15 +1,13 @@
-import React from "react";
+import React, { IntrinsicAttributes } from "react";
 
-export default (props) => (
+export default ({ style, ...props }: IntrinsicAttributes) => (
     <svg
         {...props}
-        style={Object.assign(
-            {
-                height: `1em`,
-                color: `#23b253`,
-            },
-            props.style
-        )}
+        style={{
+            height: `1em`,
+            color: `#23b253`,
+            ...style,
+        }}
         viewBox="0 0 100 100"
         xmlns="http://www.w3.org/2000/svg"
     >
