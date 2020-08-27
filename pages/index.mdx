@@ -3,11 +3,11 @@ import Logo from "../components/Logo";
 import TextSwap from "../components/TextSwap";
 
 <Header>
-    <h1>
+    <h1 style={{ textAlign: "center" }}>
         <Logo style={{ height: `3em`, verticalAlign: `middle` }} />
-        Synecdoche Web Services
+        <span style={{ color: "#23b253" }}>Synecdoche</span>
     </h1>
-    <p>
+    <p style={{ textAlign: "center", fontSize: "1.2em", fontWeight: "bold" }}>
         <TextSwap
             items={[
                 "Making software simple",
@@ -15,6 +15,10 @@ import TextSwap from "../components/TextSwap";
                 "Generating leads",
             ]}
         />
+    </p>
+    <p style={{ textAlign: "center" }}>
+        (si-NEK-ta-kee)&mdash;A type of figurative language in which a part of
+        something represents the whole
     </p>
 </Header>
 
