@@ -4,14 +4,19 @@ draft = false
 +++
 
 ## About
+
 Synecdoche is a digital marketing firm that helps businesses reach and retain customers.
+
 ## Why Us
+
 We specialize in building super-fast static sites that keep your clients engaged,
 and help you market your business online.
+
 ## Pricing
-Landing pages cost &dollar;300,
-websites built from an existing theme start at &dollar;500,
-and websites with custom themes start at &dollar;1000
+
+Landing pages cost \$300,
+websites built from an existing theme start at \$500,
+and websites with custom themes start at \$1000
 
 &nbsp;
 

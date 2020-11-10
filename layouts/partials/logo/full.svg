@@ -1,4 +1,0 @@
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" height="{{ or .height "1em" }}" style="max-width: 100%; vertical-align: middle">
-	<path fill="{{ or .color "currentColor" }}" d="M 100 0 l -60 58 l 1 -20 z" />
-	<path fill="{{ or .color "currentColor" }}" d="M 0 100 l 60 -58 l -1 20 z" />
-</svg>
